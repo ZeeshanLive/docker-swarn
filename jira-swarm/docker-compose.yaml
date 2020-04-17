@@ -1,0 +1,14 @@
+version: '3.1'
+# NOTE: move this answer file up a directory so it'll work
+
+services:
+  jira:
+    image: atlassian/jira-software
+    ports:
+      - "8080:8080"
+    volumes:
+      - jiravolume:/var/atlassian/application-data/jira
+
+volumes:
+  jiravolume:
+
